@@ -44,6 +44,13 @@
 | 11 | [自组织团队](11-self-organizing-agent-teams-2026-04-06.md) | 队友自己看任务板认领工作，空闲超时自动下班 |
 | 12 | [Worktree 任务隔离](12-worktree-task-isolation-2026-04-06.md) | 每个 task 绑定独立 git worktree，互不污染 |
 
+**第三部分：多Agent系统工程** —— 从 N 到可靠，用分工和验证收敛复杂度
+
+| # | 文章 | 一句话 |
+|---|------|--------|
+| 13 | [三角色Agent分工架构](13-three-role-agent-architecture-2026-04-11.md) | Orchestrator 规划、Worker 实现、Validator 验收——上下文即命运 |
+| 14 | [Agent Ready代码库评估](14-agent-ready-codebase-2026-04-11.md) | 8支柱 × 5等级 × 60+标准：代码库离AI自主开发还差什么 |
+
 ### 写作风格
 
 | 文章 | 一句话 |
