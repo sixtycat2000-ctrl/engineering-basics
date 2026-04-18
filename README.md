@@ -17,8 +17,18 @@
 
 | 文章 | 一句话 |
 |------|--------|
-| [Agent Client Protocol (ACP)](agent-client-protocol-2026-04-06.md) | AI Agent 和编辑器之间的标准通信协议，编程界的 USB 接口 |
+| [Agent Client Protocol (ACP) 快速概览](agent-client-protocol-2026-04-06.md) | 5 分钟了解 ACP —— AI Agent 和编辑器之间的标准通信协议 |
 | [MCP Apps](mcp-apps-guide-2026-04-06.md) | 在 AI 对话里直接渲染交互界面（图表、表单、仪表盘） |
+
+**ACP 深度拆解系列**
+
+| # | 文章 | 一句话 |
+|---|------|--------|
+| 01 | [ACP 协议全景](acp-01-protocol-overview-2026-04-18.md) | 三个角色、JSON-RPC 2.0、四阶段生命周期 —— AI 编程的 USB 接口 |
+| 02 | [ACP 初始化握手](acp-02-initialization-and-sessions-2026-04-18.md) | 版本协商、能力交换、会话创建 —— Agent 和编辑器的第一次对话 |
+| 03 | [ACP 交互循环](acp-03-prompt-turn-and-content-2026-04-18.md) | Prompt Turn 6 步生命周期、5 种内容类型、流式推送 —— 用户、Agent、工具的三方对话 |
+| 04 | [ACP 工具系统](acp-04-tools-permissions-and-resources-2026-04-18.md) | 工具调用、权限请求、文件系统、终端操作 —— Agent 怎么读写文件、跑命令 |
+| 05 | [ACP 会话控制与扩展](acp-05-session-control-and-extensibility-2026-04-18.md) | 模式切换、配置选项、斜杠命令、自定义扩展 —— 让协议适应你的场景 |
 
 ### AI Agent 内部机制
 
@@ -50,6 +60,24 @@
 |---|------|--------|
 | 13 | [三角色Agent分工架构](13-three-role-agent-architecture-2026-04-11.md) | Orchestrator 规划、Worker 实现、Validator 验收——上下文即命运 |
 | 14 | [Agent Ready代码库评估](14-agent-ready-codebase-2026-04-11.md) | 8支柱 × 5等级 × 60+标准：代码库离AI自主开发还差什么 |
+
+**第四部分：Agent可靠性工程** —— 诊断失败模式，调校运行时底盘
+
+| # | 文章 | 一句话 |
+|---|------|--------|
+| 21 | [Agent翻车诊断](21-agent-failure-diagnosis-2026-04-17.md) | 同一个模型跑分差3倍——7个失败模式揭示：可靠性是工程问题不是模型问题 |
+| 22 | [Agent运行时工程](22-agent-runtime-engineering-2026-04-17.md) | Schema字段顺序、渐进式思考、模型差异适配——运行时才是胜负手 |
+
+### LLM 推理基础
+
+| # | 文章 | 一句话 |
+|---|------|--------|
+| 15 | [LLM的内存账本](15-llm-memory-budget-2026-04-12.md) | 模型权重大小、KV Cache 内存、运行时开销——三笔账算清 LLM 要多少内存 |
+| 16 | [浮点数精度](16-floating-point-precision-2026-04-12.md) | Float32 不是均匀精度——靠近0最密，模型参数也扎堆在0附近，这就是量化的基础 |
+| 17 | [推理的两个阶段](17-inference-two-phases-2026-04-12.md) | Prefill 并行算一遍，Decode 逐字吐 N 遍——瓶颈从算力变成内存带宽 |
+| 18 | [量化三步曲](18-quantization-algorithms-2026-04-12.md) | 对称量化、非对称量化、分块量化——从 16 位压到 4 位的数学，误差从 117% 降到 8% |
+| 19 | [量化效果实测](19-quantization-benchmark-2026-04-12.md) | 8-bit 几乎无损，4-bit 是甜点（4倍压缩2倍加速），2-bit 是悬崖 |
+| 20 | [长上下文的救兵](20-long-context-2026-04-12.md) | Flash Attention 不存中间矩阵，TurboQuant 把 KV 压6倍，PagedAttention 按页管理显存 |
 
 ### 写作风格
 
